@@ -14,3 +14,9 @@ SELECT car_model, AVG(price) AS AveragePrice
 FROM car_data
 GROUP BY car_model
 ORDER BY AveragePrice DESC LIMIT 10
+
+select comp_name , sum(price) from car_data
+group by comp_name
+having sum(price) > 55000
+order by sum (price) DESC
+limit 50
